@@ -149,13 +149,14 @@ void Consultar(){
     printf("\033[35m");
     printf("--- Consultar ---\n");
     printf("\033[0m");
-    printf("Preenha as informações do produto que deseja:\n");
+    printf("Insira as informações do produto que deseja:\n");
     printf("ID: ");
     scanf("%d", &id);
     getchar();
     system("clear");
     for(int i=0; i<num; i++){
         if(id==cd[i].id){
+            
             printf("\033[35m");
             printf("------ Consultar ------\n");
             printf("\033[0m");
@@ -188,7 +189,7 @@ void Vender(){
     
     if(num==1){
     printf("\033[35m");
-    printf("------ Venda ------\n");
+    printf("--- Venda --\n");
     printf("\033[0m");
     printf("Insira as informações do produto que deseja:\n");
     printf("ID: ");
@@ -213,6 +214,7 @@ void Vender(){
             scanf("%d", &quantidade);
             getchar();
             system ("clear");
+            
             printf("Quantidade: %d\n", quantidade);
             printf("\033[32m");
             printf("Total: R$%.2f\n", quantidade*cd[i].preco);
@@ -239,12 +241,12 @@ void Vender(){
         }
             }
             else{
-                printf("Quantidade insulficiente!\n");
+                printf("Quantidade insuficiente!\n");
             }
         
         }
         else if(encontrar==0){
-            printf("Nennhum CD encontrado!\n");
+            printf("Nenhum CD encontrado!\n");
         }
     }
     
